@@ -77,13 +77,13 @@ body {
 /* NAVIGATION BAR */
 
 nav {
-  width: 90%;
+  width: 100%;
   margin: auto;
   min-height: 5vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 3rem;
   position: sticky;
   top: 0;
   left: 0;
@@ -158,10 +158,10 @@ main {
 
 /* CARD ROW */
 .card_row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  margin-top: 1rem;
 }
 
 .text_card {
@@ -265,4 +265,87 @@ form > button {
 
 .right ul li a {
   color: rgba(255, 255, 255, 0.664);
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .headline {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .headline h1 {
+    font-size: 3.6rem;
+    font-weight: lighter;
+  }
+
+  .headline p {
+    display: none;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 14px 0;
+  }
+
+  .hero_image {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero_image img {
+    width: 100%;
+    height: fit-content;
+    object-fit: contain;
+    border-radius: 30px;
+  }
+
+  .primary_btn {
+    width: 90%;
+    padding: 1rem 1.6rem;
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* CARD ROW */
+
+  .card_row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    grid-gap: 0.5rem;
+  }
+
+ footer{
+  flex-direction: column;
+  justify-content: space-between;
+  height: fit-content;
+ }
+
+ .left{
+  width: 90%;
+  border: none;
+  margin-bottom: 2rem;
+ }
+
+ .left form, .input{
+  width: 100%;
+ }
+
+ .right{
+  flex-direction: column;
+  width: 90%;
+  height: auto;
+  align-items: flex-start;
+ }
 }
